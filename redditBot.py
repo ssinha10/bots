@@ -1,9 +1,10 @@
 import praw
 import time
-
-r = praw.Reddit(user_agent = "TutorialBot by Suraj /u/kingsoy95")
+print ("Username: ")
+username = raw_input()
+r = praw.Reddit(user_agent = "Suraj /u/"+username)
 print("Logging in...")
-r.login(disable_warning=True) #put username and password inside if you want to auto-login
+r.login(username, disable_warning=True) #put username and password inside if you want to auto-login
 
 
 words_to_match = ['definately', 'defiantly', 'definantly', 'definatly']
@@ -27,7 +28,7 @@ def run_bot():
 
 while True:
 	run_bot()
-	time.sleep(10)
+	time.sleep(3)
 
 
 

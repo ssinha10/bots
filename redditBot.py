@@ -1,7 +1,10 @@
 import praw
 import time
+
 print ("Username: ")
+
 username = raw_input()
+
 r = praw.Reddit(user_agent = "Suraj /u/"+username)
 print("Logging in...")
 r.login(username, disable_warning=True) #put username and password inside if you want to auto-login
